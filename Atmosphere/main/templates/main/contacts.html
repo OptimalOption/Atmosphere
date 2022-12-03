@@ -1,0 +1,95 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block title %}
+Контакты — ОПП "Омский ЛИЦ НИИ Атмосфера"
+{% endblock %}
+
+{% block content %}
+<div class="text_header">
+    <h2>Контакты</h2></div>
+<style>
+    .container_flex_contacts {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .item_contacts {
+        text-align: center;
+        flex-basis: 50%;
+    }
+
+    .item_contacts_1 {
+        order: 2;
+    }
+
+    .item_contacts_2 {
+        order: 1;
+    }
+
+    .item_contacts_3 {
+        order: 4;
+    }
+
+    .item_contacts_4 {
+        order: 3;
+    }
+
+    .item_contacts_5 {
+        order: 6;
+    }
+
+    .item_contacts_6 {
+        order: 5;
+    }
+</style>
+<div class="container_flex_contacts">
+    <div class="item_contacts item_contacts_1">
+        <iframe class="google_map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2284.9727571419116!2d73.24921821606915!3d55.06121295258332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43abaa8939afffff%3A0x22e06e1039812cb0!2z0L_RgC4g0JPRg9Cx0LrQuNC90LAsIDEsINCe0LzRgdC6LCDQntC80YHQutCw0Y8g0L7QsdC7LiwgNjQ0MDQw!5e0!3m2!1sru!2sru!4v1647481920340!5m2!1sru!2sru"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div class="item_contacts item_contacts_2 contact_header"><h3>Омский филиал</h3>
+        <div class="contact-txt">
+                <span>
+                    <strong>Адрес:</strong> 644040, Омская область, г. Омск, проспект Губкина,
+                    1</span><br>
+            <strong>Телефон/Факс:</strong>
+            +7 (983) 118-50-14
+            <p><span style="font-size: 16px;"><strong>E-mail:</strong> <a
+                    href="mailto:omsk@nii-atm.ru">omsk@nii-atm.ru</a></span>
+        </div>
+    </div>
+    <div class="item_contacts item_contacts_3">
+        <iframe class="google_map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1995.3743031280826!2d30.34855631621278!3d59.992286664731566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469633ecc9dc3e41%3A0x85d7182b05ca29c1!2z0YPQuy4g0JrQsNGA0LHRi9GI0LXQstCwLCA3LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTk0MDIx!5e0!3m2!1sru!2sru!4v1647481704280!5m2!1sru!2sru"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div class="item_contacts item_contacts_4 contact_header"><h3>Адрес института</h3>
+        <div class="contact-txt"><strong>Адрес:</strong> 194021, г. Санкт-Петербург, ул. Карбышева, 7<br>
+            <strong>Телефон/Факс:</strong>
+            +7 (812) 297-86-62<br> <strong>E-mail:</strong>
+            <a href="mailto:info@nii-atmosphere.ru">info@nii-atmosphere.ru</a>
+            <p style="margin-top: 15px;"><a class="btn btn-primary"
+                                            href="{% static 'main/documents/kartochka-predpriyatiya-2017g..pdf' %}"
+                                            target="_blank" rel="noopener noreferrer">Карточка предприятия</a></p>
+        </div>
+    </div>
+    <div class="item_contacts item_contacts_5">
+        <iframe class="google_map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1431.7992908115539!2d33.09037901649697!3d68.969597411091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x443410262232dee3%3A0x76ab5b21baecb60e!2z0YPQuy4g0JrQsNC_0LjRgtCw0L3QsCDQkdGD0YDQutC-0LLQsCwgMzYsINCc0YPRgNC80LDQvdGB0LosINCc0YPRgNC80LDQvdGB0LrQsNGPINC-0LHQuy4sIDE4MzAyNQ!5e0!3m2!1sru!2sru!4v1647482656752!5m2!1sru!2sru"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div class="item_contacts item_contacts_6 contact_header"><h3>Мурманский филиал</h3>
+        <div class="contact-txt"><span style="font-size: 16px;"><strong>Адрес:</strong> 183025, Мурманская обл., г. Мурманск, ул. Капитана Буркова, 36, кабинет 800</span><br>
+            <span style="font-size: 16px;"><strong>Телефон/Факс:</strong> 8 (8152) 63-12-63</span><br> <span
+                    style="font-size: 16px;"><strong>E-mail:</strong> <a
+                    href="mailto:murmansk@nii-atm.ru">murmansk@nii-atm.ru</a></span>
+        </div>
+    </div>
+</div>
+<br>
+{% endblock %}

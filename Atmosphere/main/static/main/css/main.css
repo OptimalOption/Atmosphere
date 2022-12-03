@@ -1,0 +1,384 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    /*background-image: url(../../../static/main/img/wall.png);*/
+}
+
+.page {
+    overflow: hidden;
+    display: flex;
+    flex-flow: column;
+    font-family: "Montserrat", sans-serif;
+    width: 80%;
+    margin: auto;
+}
+
+a {
+    color: #0088c2;
+}
+
+ul {
+    padding-left: unset;
+}
+
+@media screen and (max-width: 1157px) {
+    .navbar-nav li {
+        padding-right: unset !important;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        font-size: 1.1em !important;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    header [type="btn_burger"] {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 894px) {
+    footer img {
+        display: none;
+    }
+
+    .item_footer_1 {
+        flex-grow: unset !important;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .item_contacts_1 {
+        display: none;
+    }
+
+    .item_contacts_3 {
+        display: none;
+    }
+
+    .item_contacts_5 {
+        display: none;
+    }
+
+    .container_flex_contacts {
+        display: block !important;
+    }
+}
+
+@media screen and (max-width: 578px) {
+    .size_news h4 {
+        font-size: medium;
+    }
+
+    .size_news p {
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 446px) {
+    .social_icons a {
+        display: none !important;
+    }
+
+    .item_footer_2 {
+        flex-grow: unset !important;
+    }
+
+    .item_footer_3 {
+        text-align: center !important;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .item_directorate_1 img {
+        width: 90px !important;
+    }
+
+    .item_directorate_2 h4 {
+        font-size: medium;
+    }
+
+    .item_directorate_2 p {
+        font-size: small;
+    }
+}
+
+/* настройка размера шрифтов */
+
+@media (min-width: 320px) and (max-width: 1440px) {
+    p, li, strong, a, span {
+        font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1440 - 320)));
+    }
+}
+
+/* стили кнопки */
+
+.btn-primary {
+    background-color: #0088c2 !important;
+    border-radius: 15px !important;
+    font-size: 20px !important;
+    outline: none !important;
+    transition: all .4s ease !important;
+    color: #f1f1f1 !important;
+    margin-bottom: unset !important;
+}
+
+.btn-primary:hover {
+    background-color: #19365f !important;
+}
+
+.btn:focus, .btn:active {
+    box-shadow: none;
+}
+
+/* стили заполнителя */
+
+*:focus {
+    outline: none;
+}
+
+*::-webkit-input-placeholder {
+    color: #C0C0C0;
+    opacity: 1;
+}
+
+*:-moz-placeholder {
+    color: #C0C0C0;
+    opacity: 1;
+}
+
+*::-moz-placeholder {
+    color: #C0C0C0;
+    opacity: 1;
+}
+
+*:-ms-input-placeholder {
+    color: #C0C0C0;
+    opacity: 1;
+}
+
+/* стили панели прокрутки */
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 100px;
+}
+
+::-webkit-scrollbar:hover {
+    background-color: rgba(0, 0, 0, 0.09);
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 100px;
+    background-clip: padding-box;
+    border: 2px solid rgba(0, 0, 0, 0);
+    min-height: 10px;
+}
+
+::-webkit-scrollbar-thumb:vertical:active {
+    background: rgba(0, 0, 0, 0.61);
+    border-radius: 100px;
+}
+
+/* начало хедера */
+
+.bg-light {
+    background-color: white !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    text-decoration: none;
+    color: #4F4C67;
+    font-size: 20px;
+    font-weight: 600;
+    transition: color .4s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #0088c2;
+}
+
+.navbar-nav li {
+    padding-right: 25px;
+}
+
+.breadcrumb {
+    background-color: white;
+}
+
+.dropdown-item {
+    color: #4F4C67;
+    font-family: "Montserrat", system-ui;
+}
+
+/* конец хедера */
+
+
+/* начало формы обратной связи */
+
+.popup_bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    z-index: 2;
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 700px;
+    background: #ffffff;
+    padding: 24px;
+    transform: translate(-50%, -50%);
+    overflow: auto;
+    z-index: 10;
+}
+
+.close-popup {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 4.5%;
+    cursor: pointer;
+}
+
+.popup form {
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+textarea {
+    padding: 12px 15px;
+    line-height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #000000;
+    font-size: 20px;
+    margin-bottom: 30px;
+    max-height: 500px;
+}
+
+.popup form input {
+    width: auto;
+    margin-right: 45px;
+    border: 1px solid #000000;
+    font-size: 20px;
+    margin-bottom: 30px;
+    height: 45px;
+    padding: 0 15px;
+    line-height: 45px;
+}
+
+.popup form input[type="button"]:hover {
+    background-color: #19365f;
+}
+
+.no-scroll {
+    overflow-y: hidden;
+}
+
+.errorBorder {
+    outline: solid 1px red;
+}
+
+/* конец формы обратной связи */
+
+/* начало блока партнеров index.html */
+
+.partners_body {
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 60px;
+}
+
+.partners_body img {
+    max-width: 10%;
+}
+
+/* конец блока партнеров index.html */
+
+/* стили для заголовков */
+
+.text_header {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: #0088c2;
+}
+
+/* стили для contacts.html */
+
+.contact-txt {
+    line-height: 2.5;
+}
+
+.contact_header h3 {
+    line-height: 2.5;
+    color: #0088c2;
+}
+
+/* стили для licenses.html */
+
+.subtitle_header {
+    text-align: center;
+    font-size: 23px;
+    color: #0088c2;
+    line-height: 145%;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #e3e3e3;
+}
+
+/* начало футера */
+
+.social_icons a {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background: #f1f1f1;
+    margin: 10px;
+    border-radius: 30%;
+    text-align: center;
+}
+
+.social_icons i {
+    color: #0088c2;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.social_icons a:hover {
+    background: #0088c2;
+    transition: 1s;
+}
+
+.social_icons a:hover i {
+    color: #f1f1f1;
+    transition: 1s;
+}
+
+.footer-phone {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* конец футера */

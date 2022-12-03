@@ -1,0 +1,29 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Вакансии — ОПП "Омский ЛИЦ НИИ Атмосфера"
+{% endblock %}
+
+{% block content %}
+<div class="text_header">
+    <h2>Вакансии</h2></div>
+{% for vacancies in vacancies %}
+<div class="line"></div>
+<p>&nbsp;</p>
+<h4 style="color: #0088c2">{{ vacancies.title }}</h4>
+<br>
+{% if vacancies.body %}
+<p>{{ vacancies.body }}</p>
+<br>
+{% endif %}
+<p><strong>Обязанности: </strong>{{ vacancies.responsibilities }}</p>
+<p><strong>Тип занятости: </strong>{{ vacancies.type_of_employment }}</p>
+<p><strong>График работы: </strong>{{ vacancies.schedule }}</p>
+<p><strong>Требования:</strong></p>
+<li>Образование: {{ vacancies.education }}</li>
+<li>Стаж работы: {{ vacancies.experience }}</li>
+<br>
+<p><strong>Зарплата: </strong>{{ vacancies.salary }} рублей</p>
+<h5 style="text-align: end; font-size: small">{{ vacancies.created_at|date:"d-m-Y" }}</h5>
+{% endfor %}
+{% endblock %}

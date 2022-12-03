@@ -1,0 +1,49 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Новости — ОПП "Омский ЛИЦ НИИ Атмосфера"
+{% endblock %}
+
+{% block content %}
+<div class="text_header">
+    <h2>Новости</h2></div>
+{% for post in posts %}
+<div class="line"></div>
+<p>&nbsp;</p>
+<div class="size_news">
+    <h4 style="color: #0088c2">{{ post.title }}</h4>
+    <p><i>{{ post.body }}</i></p>
+</div>
+{% for i in post.Images.all %}
+{% if i.img %}
+<img style="width: 25%" src="{{ i.img.url }}" alt="jpg"/>
+<p>&nbsp;</p>
+{% endif %}
+{% endfor %}
+{% for v in post.Videos.all %}
+{% if v.video %}
+<style>
+    .media_video {
+        width: 65.45%;
+        height: auto;
+    }
+</style>
+<video class="media_video"
+       id="my-video"
+       controls
+       preload="auto"
+       width="1000"
+       height="560"
+       data-setup="{}"
+>
+
+    <source src="{{ v.video.url }}" type="video/mp4"/>
+    <source src="{{ v.video.url }}" type="video/webm"/>
+
+</video>
+<p>&nbsp;</p>
+{% endif %}
+{% endfor %}
+<h5 style="text-align: end; font-size: small">{{post.created_at|date:"d-m-Y"}}</h5>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Дирекция предприятия — ОПП "Омский ЛИЦ НИИ Атмосфера"
+{% endblock %}
+
+{% block content %}
+<style>
+    .container_flex_directorate {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .item_directorate {
+        align-self: center;
+        text-align: center;
+    }
+
+    .item_directorate_2 {
+        flex-basis: 35%;
+    }
+</style>
+<div class="text_header">
+    <h2>Дирекция предприятия</h2></div>
+{% for employee in employee %}
+<div class="line"></div>
+<p>&nbsp;</p>
+{% for i in employee.Images.all %}
+{% if i.img %}
+<div class="container_flex_directorate">
+    <div class="item_directorate item_directorate_1">
+        <img style="width: 150px" src="{{ i.img.url }}" alt="jpg"/>
+    </div>
+    {% endif %}
+    {% endfor %}
+    <div class="item_directorate item_directorate_2">
+        <h4 style="color: #0088c2">{{ employee.name }}</h4>
+        <p>{{ employee.rank }}</p>
+    </div>
+</div>
+<p>&nbsp;</p>
+{% endfor %}
+{% endblock %}

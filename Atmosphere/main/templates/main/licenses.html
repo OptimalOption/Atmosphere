@@ -1,0 +1,106 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block title %}
+Лицензии и сертификаты — ОПП "Омский ЛИЦ НИИ Атмосфера"
+{% endblock %}
+
+{% block content %}
+<style>
+    .container_flex_licenses {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .item_licenses {
+        padding: 30px;
+        margin-bottom: 30px;
+        height: fit-content;
+        width: fit-content;
+        flex-basis: 25%;
+        text-align: center;
+    }
+
+    .container_img_licenses img {
+        transition: 0.5s;
+    }
+
+    .container_img_licenses img:hover {
+        transform: scale(1.05);
+    }
+</style>
+<div class="text_header">
+    <h2>Лицензии и сертификаты АО «НИИ Атмосфера»</h2>
+</div>
+<div class="subtitle_header">
+    <span>Свидетельства</span>
+    <div class="line"></div>
+</div>
+<div class="container_flex_licenses">
+    <div class="item_licenses item_licenses_1">
+        <div class="container_img_licenses">
+            <a href="{% static 'main/img/img1.jpg' %}" data-lightbox="lbox"><img
+                    src="{% static 'main/img/thumb-1.jpg' %}"
+                    alt="jpg"></a>
+        </div>
+        <em>Свидетельство о государственной регистрации</em>
+    </div>
+    <div class="item_licenses item_licenses_2">
+        <div class="container_img_licenses">
+            <a href="{% static 'main/img/img2.jpg' %}" data-lightbox="lbox"><img
+                    src="{% static 'main/img/thumb-2.jpg' %}"
+                    alt="jpg"></a>
+        </div>
+        <em>Свидетельство о постановке на налоговый учет</em>
+    </div>
+    <div class="item_licenses item_licenses_3">
+        <div class="container_img_licenses">
+            <a href="{% static 'main/img/img3.jpg' %}" data-lightbox="lbox"><img
+                    src="{% static 'main/img/thumb-3.jpg' %}"
+                    alt="jpg"></a>
+        </div>
+        <em>Свидетельство о допуске к работам</em>
+    </div>
+    <div class="item_licenses item_licenses_4">
+        <div class="container_img_licenses">
+            <a href="{% static 'main/img/img4.jpg' %}" data-lightbox="lbox"><img
+                    src="{% static 'main/img/thumb-4.jpg' %}"
+                    alt="jpg"></a>
+        </div>
+        <em>Свидетельство о допуске к работам (приложение)</em>
+    </div>
+</div>
+<div class="subtitle_header">
+    <span>Лицензии и сертификаты</span>
+    <div class="line"></div>
+</div>
+<div class="container_flex_licenses">
+    <div class="item_licenses item_licenses_5">
+        <div class="container_img_licenses">
+            <a href="{% static 'main/img/img5.jpg' %}" data-lightbox="lbox"><img
+                    src="{% static 'main/img/thumb-5.jpg' %}"
+                    alt="jpg"></a>
+        </div>
+        <em>Лицензия в области гидрометеорологии</em>
+    </div>
+    <div class="item_licenses item_licenses_6">
+        <div class="container_img_licenses">
+            <a href="{% static 'main/img/img6.jpg' %}" data-lightbox="lbox"><img
+                    src="{% static 'main/img/thumb-6.jpg' %}"
+                    alt="jpg"></a>
+        </div>
+        <em>Лицензия в области гидрометеорологии (2 страница)</em>
+    </div>
+    <div class="item_licenses item_licenses_7">
+        <div class="container_img_licenses">
+            <a href="{% static 'main/img/img7.jpg' %}" data-lightbox="lbox"><img
+                    src="{% static 'main/img/thumb-7.jpg' %}"
+                    alt="jpg"></a>
+        </div>
+        <em>Сертификат соответствия ISO 9001, ISO 14001, ISO 45001</em>
+    </div>
+</div>
+{% endblock %}
